@@ -1,8 +1,10 @@
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
-const NavBar = () => {
+const NavBar = (props) => {
     return(
         <nav class = "navBar">
+            <h1>{props.name}</h1>
             <button class = "buttons">
                 INICIO
             </button>
@@ -18,6 +20,8 @@ const NavBar = () => {
             <button class = "buttons">
                 ACCESORIOS
             </button>
+            
+            <CartWidget />
         </nav>
     )
 }
