@@ -1,0 +1,27 @@
+.cardBox {
+    margin: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.506);
+}
+
+.countBox {
+    display: flex;
+    justify-content: center;
+}
+
+.countButton {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: coral;
+    border-radius: 5px;
+}
+
+.cartButton2 {
+    border: none;
+    padding: 15px 5px;
+    background-color: coral;
+    width: 100%;
+}
