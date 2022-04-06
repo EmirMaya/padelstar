@@ -1,0 +1,8 @@
+.item-list {
+    width: 70%;
+    font-family: 'Bebas Neue', cursive;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
