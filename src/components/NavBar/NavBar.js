@@ -3,21 +3,21 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = (props) => {
     return(
-        <nav class = "navBar">
+        <nav className = "navBar">
             <h1>{props.name}</h1>
-            <button class = "buttons">
+            <button className = "buttons">
                 INICIO
             </button>
 
-            <button class = "buttons">
+            <button className = "buttons">
                 PALETAS
             </button>
 
-            <button class = "buttons">
+            <button className = "buttons">
                 INDUMENTARIA
             </button>
 
-            <button class = "buttons">
+            <button className = "buttons">
                 ACCESORIOS
             </button>
             

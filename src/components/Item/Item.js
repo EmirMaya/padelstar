@@ -5,7 +5,7 @@ const Item = ({name, img, stock}) => {
         <section className="item-card">
              <img className="item-image" src={img} alt={name} />
              <h3 className="item-name">{name}</h3>
-             <button className="item-description">Ver Descripcion</button>
+             <button className="item-description">Comprar</button>
              <p className="item-stock">Stock Disponible : {stock}</p>
         </section>
     )
