@@ -1,36 +1,55 @@
-
 h1 {
     color: white;
     font-size: 40px;
+    margin: 15px 0;
 }
-.navBar {
+
+.nav-bar {
+    height: 80px;
     margin: 0;
-    padding: 40px;
-    background-color: rgb(68, 68, 68);
+    background-color: coral;
     display: flex;
     justify-content: space-around;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.459);
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .buttons {
     color: bisque;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    background-color: rgb(116, 116, 116);
-    margin: 30px 0;
-   border-radius: 8px;
-   border: none;
+    background-color: coral;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #ff6831;
+    border-right: 1px solid #ff6831;
 }
+
+.paletas-link {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: bisque;
+}
+
 
 .cartWidget {
     font-size: 40px;
     color: white;
-    
+
 }
 
 .cartButton {
-    margin: 30px 0;
-    border-radius: 5px;
-  border: none;
-  background-color: rgb(116, 116, 116);
+    border-left: 1px solid #ff6831;
+    border-right: 1px solid #ff6831;
+    border-top: none;
+    border-bottom: none;
+    background-color: coral;
 }

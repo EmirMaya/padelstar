@@ -1,0 +1,36 @@
+
+.item-card-detail {
+    width: 100%;
+    background-color:beige;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-detail {
+    padding: 10px 0;
+    width: 270px;
+    height: 300px;
+}
+
+.name-detail {
+    font-size: 30px;
+}
+
+.price-detail {
+    font-size: 22px;
+}
+
+.stock-detail {
+    font-size: 15px;
+}
+
+.buy-button {
+    background-color: coral;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+}
+

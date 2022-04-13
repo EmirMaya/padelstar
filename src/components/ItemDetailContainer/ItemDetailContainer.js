@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react'
 import { getProductsById } from "../../asyncmock";
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
+import { useParams } from 'react-router-dom';
+
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
+    const {productId} = useParams()
 
     // useEffect(() => {
         // fetch('https://api.mercadolibre.com/sites/MLA/search?q=paleta')
@@ -15,7 +18,7 @@ const ItemDetailContainer = () => {
         // })
         // }, [4000])
         useEffect(() => {
-            getProductsById(1).then(prods => {
+            getProductsById(productId).then(prods => {
                 setProducts(prods)
             }).catch(error => {
                 console.log(error);
@@ -25,7 +28,6 @@ const ItemDetailContainer = () => {
     console.log(products);
     return (
         <div className='detail-container'>
-      
             <ItemDetail products={products}/>
         </div>
     );
