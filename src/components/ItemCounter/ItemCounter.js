@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./ItemCounter.css"
 const ItemCounter = ({ initial, stock, onAdd }) => {
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(0)
 
     console.log(stock)
 
@@ -17,13 +18,17 @@ const ItemCounter = ({ initial, stock, onAdd }) => {
         }
     }
     return (
-        <div className="cardBox"> 
+        <div className="cardBox">
             <div className="countBox">
                 <button onClick={decrement} className="countButton">-</button>
                 <p>{count}</p>
                 <button onClick={increment} className="countButton">+</button>
             </div>
-            <button onClick={() => onAdd(count)} className="cartButton2">Agregar al carrito</button>
+
+            <button onClick={() => onAdd(count)} className="cartButton2">
+                Agregar al carrito
+            </button>
+
         </div>
     )
 

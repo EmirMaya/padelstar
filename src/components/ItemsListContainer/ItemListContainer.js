@@ -25,9 +25,7 @@ const ItemListContainer = (props) => {
         })
     },[categoryId])
 
-    // const handleOnAdd = (quantity) => {
-    //     console.log(`Se agregaron ${quantity} productos al carrito`)
-    // }
+   
     console.log(props.greeting);
     return (
         <div>
@@ -36,7 +34,7 @@ const ItemListContainer = (props) => {
             <div>
                 {categories.map(cat => <NavLink className="category-link" key={cat.id} to={`/list/${cat.id}`}>{cat.description}</NavLink>)}
             </div>
-            {/* <ItemCounter initial="1" stock="5" onAdd={handleOnAdd} /> */}
+            
             <ItemList products={products}/>
         </div>
     );
