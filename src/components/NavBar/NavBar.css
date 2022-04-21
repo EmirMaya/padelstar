@@ -39,6 +39,19 @@ h1 {
     color: bisque;
 }
 
+.cart-box {
+    border-left: 1px solid #ff6831;
+    border-right: 1px solid #ff6831;
+    display: flex;
+    align-items: center;
+}
+
+.cart-num {
+    margin-top: 23px;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
 
 .cartWidget {
     font-size: 40px;
@@ -47,9 +60,6 @@ h1 {
 }
 
 .cartButton {
-    border-left: 1px solid #ff6831;
-    border-right: 1px solid #ff6831;
-    border-top: none;
-    border-bottom: none;
+    border: none;
     background-color: coral;
 }

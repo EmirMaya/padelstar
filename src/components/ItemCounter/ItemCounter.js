@@ -4,7 +4,6 @@ import "./ItemCounter.css"
 const ItemCounter = ({ initial, stock, onAdd }) => {
     const [count, setCount] = useState(0)
 
-    console.log(stock)
 
     const decrement = () => {
         if (count > initial) {

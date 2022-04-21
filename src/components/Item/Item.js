@@ -1,6 +1,10 @@
 import './Item.css'
+
 import {Link} from 'react-router-dom'
 const Item = ({id, name, img, stock}) => {
+ 
+
+
     return(
         <section className="item-card">
              <img className="item-image" src={img} alt={name} />
