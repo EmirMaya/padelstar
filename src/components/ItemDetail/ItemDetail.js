@@ -2,7 +2,7 @@ import Detail from '../Detail/Detail'
 import './ItemDetail.css'
 import ItemCounter from '../ItemCounter/ItemCounter';
 import { Link } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import CartContext from '../context/CartContext';
 
 const ItemDetail = ({ products }) => {
@@ -12,12 +12,13 @@ const ItemDetail = ({ products }) => {
 
     const handleOnAdd = (count) => {
        
-        const objProd = [
-            products.id, products.name, products.price
-        ]
+        const objProd = {
+            id: products.id, name: products.name, price: products.price
+        }
 
         addItem({ ...objProd, quantity: count })
     }
+   
 
 
     return (
