@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect, useContext } from 'react';
 import CartContext from '../context/CartContext';
 
+
 const ItemDetail = ({ products }) => {
  
 
