@@ -93,7 +93,7 @@ const Cart = () => {
                 }
                 {total === 0 && <h2>No hay productos en el carrito</h2>}
                 {total !== 0 && <li className="cart-list">Total: $ {total}</li>}
-                {/* <button className="button-cart-list" onClick={() => createOrder()}>Generar Orden</button> */}
+                <button className="button-cart-list" onClick={() => createOrder()}>Generar Orden</button>
             </ul>
         </div >
     )
