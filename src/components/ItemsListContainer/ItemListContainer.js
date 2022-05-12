@@ -1,28 +1,57 @@
-import ItemCounter from "../ItemCounter/ItemCounter"
+// import ItemCounter from "../ItemCounter/ItemCounter"
 import { useState, useEffect } from "react";
-import { getProducts } from "../../asyncmock";
+import { getCategories, getProducts } from "../../asyncmock";
+import { getDocs, collection, query, where, getDoc } from "firebase/firestore";
 import ItemList from "../ItemList/ItemList";
 import '../../index.css'
+import { useParams, NavLink } from "react-router-dom";
+import { firestoreDb } from "../../services/firebase";
+
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
-     
-    useEffect(() => {
-        getProducts().then(prods => {
-            setProducts(prods)
-        }).catch(error => {
-            console.log(error);
-        })
-    })
+    const [categories, setCategories] = useState([])
+    const { categoryId } = useParams()
 
-    // const handleOnAdd = (quantity) => {
-    //     console.log(`Se agregaron ${quantity} productos al carrito`)
-    // }
+    useEffect(() => {
+        getCategories().then(categories => {
+            setCategories(categories)
+        })
+        // getDocs(collection(firestoreDb, 'products')).then(response => {
+        //     const categories = response.docs.map( doc =>{
+        //         return{category: doc.category}
+        //     })
+        //     setCategories(categories)
+        // })
+    }, [])
+
+    useEffect(() => {
+        const collectionRef = categoryId ? query(collection(firestoreDb, 'products'), where('category', '==', categoryId)) : collection(firestoreDb, 'products');
+        getDocs(collectionRef).then(response => {
+            console.log(response)
+            const products = response.docs.map(doc => {
+                return { id: doc.id, ...doc.data() }
+            })
+            setProducts(products)
+        })
+
+    }, [categoryId])
+    
+    if (products.length === 0) {
+        return(
+            <h2>No hay productos</h2>
+        )
+    }
+
     console.log(props.greeting);
     return (
         <div>
+
             <h2>{props.greeting}</h2>
-            {/* <ItemCounter initial="1" stock="5" onAdd={handleOnAdd} /> */}
-            <ItemList products={products}/>
+            <div>
+                {categories.map(cat => <NavLink className="category-link" key={cat.id} to={`/list/${cat.id}`}>{cat.description}</NavLink>)}
+            </div>
+
+            <ItemList products={products} />
         </div>
     );
 };

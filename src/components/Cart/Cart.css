@@ -1,0 +1,18 @@
+.cart-ul {
+    margin: 30px 200px;
+}
+
+.cart-list {
+    border-top: 1px solid black;
+    padding: 5px 15px;
+    background-color: rgba(255, 127, 80, 0.735);
+    list-style-type: none;
+}
+
+.button-cart-list {
+    border: none;
+    padding: 5px 15px;
+    margin-left: 10px;
+    background-color: grey;
+    border-radius: 8px;
+}
