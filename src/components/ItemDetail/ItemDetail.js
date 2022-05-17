@@ -30,8 +30,6 @@ const ItemDetail = ({ products }) => {
             <p>
                 {products.description}
             </p>
-
-
         </div>
     )
 

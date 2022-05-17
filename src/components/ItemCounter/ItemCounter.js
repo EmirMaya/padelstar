@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+
 import "./ItemCounter.css"
 const ItemCounter = ({ initial, stock, onAdd }) => {
     const [count, setCount] = useState(0)

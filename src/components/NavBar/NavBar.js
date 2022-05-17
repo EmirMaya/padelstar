@@ -7,23 +7,17 @@ const NavBar = (props) => {
             <h1>{props.name}</h1>
             <div className='button-container'>
                 <button className="buttons">
-                    INICIO
+                    <NavLink className={({ isActive }) => isActive ? 'paletas-link' : 'nav-link'} to='/'>INICIO</NavLink>
                 </button>
 
                 <button className="buttons">
-                    <NavLink className={({isActive}) => isActive ? 'paletas-link' : 'nav-link'} to='/List'>PALETAS</NavLink>
+                    <NavLink className={({ isActive }) => isActive ? 'paletas-link' : 'nav-link'} to='/List'>PRODUCTOS</NavLink>
                 </button>
 
-                <button className="buttons">
-                    INDUMENTARIA
-                </button>
-
-                <button className="buttons">
-                    ACCESORIOS
-                </button>
             </div>
-
             <CartWidget />
+
+
         </nav>
     )
 }

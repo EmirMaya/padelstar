@@ -1,18 +1,73 @@
 .cart-ul {
     margin: 30px 200px;
+    padding: 0;
 }
 
 .cart-list {
-    border-top: 1px solid black;
-    padding: 5px 15px;
-    background-color: rgba(255, 127, 80, 0.735);
+    font-size: 20px;
+    margin-bottom: 10;
+    padding: 35px 15px;
+    background-color: beige;
     list-style-type: none;
 }
 
 .button-cart-list {
+    font-family: 'Bebas Neue', cursive;
     border: none;
     padding: 5px 15px;
     margin-left: 10px;
-    background-color: grey;
-    border-radius: 8px;
+    background-color: #959595;
+   
+}
+
+.total-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-button {
+    
+    background-color: black;
+    color: bisque;
+    font-family: 'Bebas Neue', cursive;
+    padding: 10px 20px;
+    margin-top: 30px;
+}
+
+.form {
+    padding: 30px;
+    margin: 10px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.input-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+
+.input-box label {
+    margin-right: 10px;
+}
+
+.input-box input {
+    border: none;
+    padding: 10px 20px;
+    margin-left: 30px;
+}
+
+.total {
+    margin: 30px 200px;
+    background-color: beige;
+    padding: 30px 50px;
+    text-align: center;
+    list-style-type: none;
 }

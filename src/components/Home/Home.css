@@ -1,0 +1,41 @@
+.carousel-img {
+    padding: 0;
+    margin: 0;
+}
+
+ Carousel div .p-carousel {
+    font-size: 30px;
+    color: aqua;
+}
+
+.home-section {
+    
+    margin: 30px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-section {
+    width: 80%;
+}
+
+.home-section div {
+    margin: 30px;
+    background-color: beige;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.home-section div h3 {
+    font-size: 30px;
+}
+
+.home-section div p {
+    font-size: 20px;
+}

@@ -7,7 +7,7 @@ const Detail = ({ name, img, stock, price }) => {
             <div>
                 <h3 className="name-detail">{name}</h3>
                 <p className="price-detail">$ {price}</p>
-                <button className='buy-button'>Comprar</button>
+              
                 <p className="stock-detail">Stock Disponible : {stock}</p>
             </div>
         </section>
